@@ -7,7 +7,7 @@ export default function SearchBlock() {
     let [days, setDays] = useState();
     let [col, setCol] = useState();
     const search = () => {
-        let url = new URL(window.location.host);
+        let url = new URL(window.location.origin);
         url.searchParams.set('city', city.toLowerCase());
         url.searchParams.set('days', days.toLowerCase());
         url.searchParams.set('sleps', col.toLowerCase());
