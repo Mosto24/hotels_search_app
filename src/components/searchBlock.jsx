@@ -7,15 +7,11 @@ export default function SearchBlock() {
     let [days, setDays] = useState();
     let [col, setCol] = useState();
     const search = () => {
-      try {
         let url = new URL(window.location.host);
         url.searchParams.set('city', city.toLowerCase());
         url.searchParams.set('days', days.toLowerCase());
         url.searchParams.set('sleps', col.toLowerCase());
         window.location = window.location.origin + '/hotels_page' + url.search
-      } catch (e){
-        
-      }
     }
  
     return (
